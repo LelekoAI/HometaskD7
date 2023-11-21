@@ -1,0 +1,30 @@
+ # устанавливаем венв
+ python -m venv venv
+ # активируем венв
+ venv\scripts\activate
+ # создаём файлик с версиями либ
+ pip freeze > requierments.txt
+ # смотрим зависимости
+ pip list
+ # деинсталируем джанго
+ #pip uninstall django
+ # создать проект в джанго
+ django-admin startproject FirstDjangoProject
+ # перемещаемся в дирректорию проекта
+ cd DjangoProject
+ # смотри файлы
+ ls
+ # запускаем проект
+ python manage.py runserver
+ # установка джанго
+ python -m pip install Django
+ # настройка бд, миграции
+ python manage.py migrate
+ # создаем администратора (admin admin /admin)
+ python manage.py createsuperuser
+ # создаем приложение
+ python manage.py startapp mc_donalds
+ # для того чтобы соотнести бд и nodels
+ python manage.py makemigrations
+ # создание django shell
+ python manage.py shell
