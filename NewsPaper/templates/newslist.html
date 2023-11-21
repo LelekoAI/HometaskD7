@@ -13,9 +13,7 @@ Newslist
    <h2>{{ newslist|length }}</h2>
     <form action="" method="get">
        {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
-        <span> старт </span>>
         {{ filterset.form.as_p }}
-        <span> конец </span>>
        {# Добавим кнопку отправки данных формы #}
        <input type="submit" value="Найти" />
    </form>

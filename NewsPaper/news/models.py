@@ -41,11 +41,12 @@ class Post(models.Model):
     CATEGORY = [(news, 'новость'), (content, 'статья')]
     creator = models.ForeignKey(Author, on_delete=models.CASCADE)
     type_choice = models.CharField(max_length=7, choices=CATEGORY, default=content)
-    creation_time = models.DateTimeField(auto_now=True)
+    creation_time = models.DateTimeField(auto_now=True, editable=False)
     post_category = models.ManyToManyField(Category, through='PostCategory')
     header = models.CharField(max_length=128)
     content = models.TextField()
     rating = models.SmallIntegerField(default=0)
+    readonly_fields = ('creation_time',)
 
     def like(self):
         self.rating += 1

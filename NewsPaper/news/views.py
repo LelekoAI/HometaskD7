@@ -36,6 +36,7 @@ class PostList(ListView):
         # Добавим ещё одну пустую переменную,
         # чтобы на её примере рассмотреть работу ещё одного фильтра.
         context['next_news'] = "Следующая новость - скоро!"
+        context['filterset'] = self.filterset
         return context
 
     def get_queryset(self):

@@ -9,6 +9,6 @@ class PostForm(forms.ModelForm):
        model = Post
        fields = [
            'header',
-           # 'content',
-           # 'creator',
+           'content',
+           'creation_time',
        ]

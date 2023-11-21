@@ -16,6 +16,6 @@ class PostFilter(FilterSet):
            # поиск по названию
            'header': ['icontains'],
            # количество товаров должно быть больше или равно
-           # 'post_category': ['exact'],
-           # 'creation_time': ['isnull'],
+           'post_category': ['exact'],
+           'creation_time': ['gt'],
        }
