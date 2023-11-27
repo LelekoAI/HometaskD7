@@ -1,6 +1,7 @@
 from django.urls import path
 # Импортируем созданные нами представления
 from .views import PostList, PostDetail, PostCreate, PostUpdate, PostDelete
+from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
    # path — означает путь.
